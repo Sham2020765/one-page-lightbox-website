@@ -1,104 +1,64 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>The Pet Shop</title>
-        <meta charset="UTF-8">
-        <!--ADD CSS-->
-        <link rel="stylesheet" href="css/style1.css">
-    </head>
-    <body>
-        <!--NAVBAR-->
-        <div class="navBar">
-            <ul id="navBorder">
-                <a href="index.html"><li>HOME</li></a>
-                <a href="contact.html"><li>CONTACT</li></a>
-            </ul>
-            <ul>
-                <a href="#cat"><li>Cats & Kittens</li></a>
-                <a href="#dog"><li>Dogs & Puppies</li></a>
-                <a href="#rabbit"><li>Rabbit</li></a>
-                <a href="#guineapig"><li>Guinea Pigs</li></a>
-                <a href="#fish"><li>Fish</li></a>
-                <a href="#reptile"><li>Reptiles</li></a>
-                <a href="#video"><li>Videos</li></a>
-            </ul>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Pet Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <ul id="navBorder">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <ul>
+            <li><a href="#cat">Cats & Kittens</a></li>
+            <li><a href="#dog">Dogs & Puppies</a></li>
+            <li><a href="#rabbit">Rabbits</a></li>
+            <li><a href="#guineapig">Guinea Pigs</a></li>
+            <li><a href="#fish">Fish</a></li>
+            <li><a href="#reptile">Reptiles</a></li>
+        </ul>
+    </div>
+
+    <header>
+        <div>
+            <h1 class="animateText">Welcome to The Pet Shop!</h1>
         </div>
-        
-        <!--HEADER-->
-        <header>
-            <div>
-                <h1 class="animateText">Welcome to The Pet Shop!</h1>
+    </header>
+
+    <main class="gallery-container">
+        <h2>Our Beautiful Pets</h2>
+        <div class="gallery">
+            <div class="gallery-item" id="cat">
+                <img src="cat.png" alt="Cats & Kittens" class="lightbox-trigger">
             </div>
-        </header>
-
-        <!--PET IMAGES-->
-        <section id="gallery">
-            <div class="container">
-                <!-- Cats Section -->
-                <div id="cat" class="image-container">
-                    <h1>Cats & Kittens</h1>
-                    <img src="cat.png" alt="Picture of a cat" class="image" onclick="const m = document.getElementById('lightboxModal'); m.style.display='flex'; document.getElementById('lightboxImg').src=this.src;">
-                </div>
-
-                <!-- Dogs Section -->
-                <div id="dog" class="image-container">
-                    <h1>Dogs & Puppies</h1>
-                    <img src="dog.png" alt="Picture of a dog" class="image" onclick="const m = document.getElementById('lightboxModal'); m.style.display='flex'; document.getElementById('lightboxImg').src=this.src;">
-                </div>
-
-                <!-- Rabbits Section -->
-                <div id="rabbit" class="image-container">
-                    <h1>Rabbits</h1>
-                    <img src="rabbits.png" alt="Picture of a rabbit" class="image" onclick="const m = document.getElementById('lightboxModal'); m.style.display='flex'; document.getElementById('lightboxImg').src=this.src;">
-                </div>
-
-                <!-- Guinea Pigs Section -->
-                <div id="guineapig" class="image-container">
-                    <h1>Guinea Pigs</h1>
-                    <img src="guineapigs.png" alt="Picture of a guinea pig" class="image" onclick="const m = document.getElementById('lightboxModal'); m.style.display='flex'; document.getElementById('lightboxImg').src=this.src;">
-                </div>
-
-                <!-- Fish Section -->
-                <div id="fish" class="image-container">
-                    <h1>Fish</h1>
-                    <img src="fish.png" alt="Picture of a fish" class="image" onclick="const m = document.getElementById('lightboxModal'); m.style.display='flex'; document.getElementById('lightboxImg').src=this.src;">
-                </div>
-
-                <!-- Reptiles Section -->
-                <div id="reptile" class="image-container">
-                    <h1>Reptiles</h1>
-                    <img src="beardedDragon.png" alt="Picture of a bearded dragon" class="image" onclick="const m = document.getElementById('lightboxModal'); m.style.display='flex'; document.getElementById('lightboxImg').src=this.src;">
-                    <div class="overlay">
-                        <div class="text">Select which reptile you want to take home.</div>
-                    </div>
-                </div>
+            <div class="gallery-item" id="dog">
+                <img src="dog.png" alt="Dogs & Puppies" class="lightbox-trigger">
             </div>
-        </section>
-
-        <!--VIDEOS-->
-        <section>
-            <div id="video" class="container">
-                <h2>Videos</h2>
-                <iframe width="1280" height="720" src="https://youtube.com"></iframe>
+            <div class="gallery-item" id="rabbit">
+                <img src="rabbits.png" alt="Rabbits" class="lightbox-trigger">
             </div>
-        </section>
-
-        <!--FOOTER-->
-        <footer>
-            <table>
-                <tr>
-                    <td><p>The Pet Shop! &copy;</p></td>
-                    <td><p>123 Square Ave</p><p>Portland, OR 97204</p></td>
-                    <td><p>503-234-3966</p></td>
-                </tr>
-            </table>
-        </footer>
-
-        <!-- Lightbox Modal Overlay >
-        <div id="lightboxModal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.9); justify-content:center; align-items:center;">
-          <span style="position:absolute; top:20px; right:35px; color:white; font-size:40px; cursor:pointer; font-family:sans-serif;" onclick="document.getElementById('lightboxModal').style.display='none'">&times;</span>
-          <img id="lightboxImg" style="max-width:80%; max-height:80%; border: 3px solid white; border-radius: 5px;">
+            <div class="gallery-item" id="guineapig">
+                <img src="guineapigs.png" alt="Guinea Pigs" class="lightbox-trigger">
+            </div>
+            <div class="gallery-item" id="fish">
+                <img src="fish.png" alt="Fish" class="lightbox-trigger">
+            </div>
+            <div class="gallery-item" id="reptile">
+                <img src="beardedDragon.png" alt="Reptiles" class="lightbox-trigger">
+            </div>
         </div>
+    </main>
 
-    </body>
+    <div id="lightboxModal" class="modal">
+        <span class="close-btn">&times;</span>
+        <img class="modal-content" id="imgModal">
+        <div id="caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
